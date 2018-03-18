@@ -1,10 +1,14 @@
 html{
+	font-size: 64px;
 	height: 100%;
 }
 body{
+	margin: 0;
 	height: 100%;
 	background-color: #68cdd5;
+
 }
+
 .back{
 	position: absolute;
 	top: 0.3125rem;
