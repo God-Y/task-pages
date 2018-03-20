@@ -50,12 +50,14 @@ footer div{
 footer .message{
 	border: 2px solid currentcolor;
 	color: #5fc0cd;
-	margin-right: 0.26rem;
-	margin-left: 0.38rem;
+	margin-left: 4.8%;
 }
 footer .phone{
 	color: #fff;
 	background-color: #5fc0cd;
 	border: 2px solid  #5fc0cd;
-
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 4.8%;
 }
