@@ -19,7 +19,7 @@ header{
 
 header .login{
 	position: absolute;
-	 font-size: 0.36rem;
+	 font-size: 0.38rem;
 	 left: 50%;
 	 top: 50%;
 	 transform: translate(-50%,-50%);
@@ -35,7 +35,6 @@ header .close{
 header .register{
     position: absolute;
     right: 0.3rem;
-   
     font-size: 0.32rem;
 }
 section{
@@ -99,7 +98,7 @@ footer button{
     color: #ffffff;
     background-color: #5fc0cd;
     border: none;
-    font-size: 0.36rem;
+    font-size: 0.38rem;
     text-align: center;
 }
 footer span{
