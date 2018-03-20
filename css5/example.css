@@ -1,0 +1,61 @@
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	margin: 0;
+}
+header{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	background-color: #5fc0cd;
+	position: fixed;
+	font-size: 0.36rem;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+header img{
+	width: 0.22rem;
+	height: 0.38rem;
+	position: absolute;
+	left: 0.36rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.user{
+	padding-top: 0.8rem;
+	
+}
+footer{
+	height: 1.16rem;
+	line-height: 1.16rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* background: red; */
+	font-size: 0;
+}
+footer div{
+	display: inline-block;
+	vertical-align: middle;
+	height: 0.84rem;
+	width: 43.44%;
+	text-align: center;
+	line-height: 0.84rem;
+	font-size: 0.34rem;
+	border-radius: 0.1rem;
+}
+footer .message{
+	border: 2px solid currentcolor;
+	color: #5fc0cd;
+	margin-right: 0.26rem;
+	margin-left: 0.38rem;
+}
+footer .phone{
+	color: #fff;
+	background-color: #5fc0cd;
+	border: 2px solid  #5fc0cd;
+
+}
