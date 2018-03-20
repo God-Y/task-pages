@@ -23,7 +23,7 @@ header .login{
 	 left: 50%;
 	 top: 50%;
 	 transform: translate(-50%,-50%);
-	 
+	 letter-spacing: 2px;
 }
 header .close{
     position: absolute;
@@ -95,7 +95,7 @@ footer button{
     border: none;
     font-size: 36px;
     text-align: center;
-    letter-spacing: 15px;
+  
 }
 footer span{
     color: #5fc0cd;
