@@ -6,7 +6,7 @@
     <title>Document</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script>
-        ! function (e) {
+        ! function(e) {
             function t(a) {
                 if (i[a]) return i[a].exports;
                 var n = i[a] = {
@@ -18,13 +18,13 @@
             }
             var i = {};
             return t.m = e, t.c = i, t.p = "", t(0)
-        }([function (e, t) {
+        }([function(e, t) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
             var i = window;
-            t["default"] = i.flex = function (normal, e, t) {
+            t["default"] = i.flex = function(normal, e, t) {
                 var a = e || 100,
                     n = t || 1,
                     r = i.document,
@@ -52,15 +52,28 @@
     <header>
         <img src="img/back.png" alt=""> 个人主页
     </header>
-    <div class="user">
-        <img src="img/user.png" alt="">
-        <div class="msg">
-            <span>高素雅</span>
-            <span>51岁</span>
-            <p>
-                <img src="img/pos.png" alt="">北京.通州.果园</p>
-        </div>
-    </div>
+    <main>
+        <section class="user">
+            <img src="img/user.png" alt="">
+            <div class="user-msg">
+                <span class="name">高素雅</span>
+                <span class="age">51岁</span>
+                <p><img src="img/pos.png" alt="">北京.通州.果园</p>
+            </div>
+        </section>
+        <div class="skill"><i class="separator"></i>专业技能</div>
+        <ul>
+            <li class="condition">
+                <div><img src="img/star.png" alt="">住家</div><i class="separator"></i>
+                <div><img src="img/star.png" alt="">不含餐</div>
+                </l>
+                <li><span class="text-gray">从业年限</span><i class="separator"></i><span>0~3年</span></li>
+                <li><span class="text-gray">工作时间</span><i class="separator"></i><span>全天</span></li>
+                <li><span class="text-gray">服务价格</span><i class="separator"></i><span class="text-red">25元/小时</span></li>
+                <li class="intrduce"><span class="text-gray">自我介绍</span><i class="separator"></i><span>可以洗衣、做饭、照顾老人。在护工方面有5年经验，经验丰富。可以洗衣、做饭、照顾老人。在护工方面有5年经验，经验丰富。可以洗衣、做饭、照顾老人。在护工方面有5年经验，经验丰富。</span></li>
+        </ul>
+    </main>
+
     <footer>
         <div class='message'>留言</div>
         <div class="phone">电话联系</div>
