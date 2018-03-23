@@ -57,7 +57,7 @@ main {
     height: 3.27rem;
     background-image: url(img/bgImg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .user img {
@@ -109,6 +109,7 @@ main .skill {
     align-items: center;
     height: 1rem;
     font-size: .32rem;
+    border-bottom: .01rem solid #e1e5e7;
 }
 
 main .skill i {
@@ -166,7 +167,7 @@ footer {
     font-size: 0;
 }
 
-footer div {
+footer  div{
     display: inline-block;
     vertical-align: middle;
     height: 0.84rem;
