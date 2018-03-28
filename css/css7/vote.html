@@ -173,10 +173,11 @@
             // 雪碧图小图标显现
             var $select=$(".gamer-select");
             $('.gamer').on('click',function(){
+                $select.css('visibility','hidden');
                 if( $(this).find($select).css('visibility') == 'hidden'){
                      $(this).find($select).css('visibility','visible');
                 }else{
-                    $(this).find($select).css('visibility','hidden');
+                   
                 }
                
             });

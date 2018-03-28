@@ -133,13 +133,13 @@ main .gamer-select .kill {
     background: url(../img/sprite.png) 0 0/100% auto;
 }
 main .gamer-select .find {
-    background: url(../img/sprite.png) 0 -33.3%/100% auto;
+    background: url(../img/sprite.png) 0 33.3%/100% auto;
 }
 main .gamer-select .load {
-    background: url(../img/sprite.png) 0 -66.6%/100% auto;
+    background: url(../img/sprite.png) 0 66.6%/100% auto;
 }
 main .gamer-select .add {
-    background: url(../img/sprite.png) 0 -100%/100% auto;
+    background: url(../img/sprite.png) 0 100%/100% auto;
 }
 
 /* footer开始   */
