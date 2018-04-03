@@ -704,8 +704,9 @@ footer .top-row .col-sm-5 .center-title {
     position: fixed;
     right: 0px;
     bottom: 250px;
-    width: 80px;
     height: 80px;
+    text-decoration: none;
+    overflow: hidden;
 }
 
 .go-top .fa-arrow-circle-up {
@@ -714,11 +715,20 @@ footer .top-row .col-sm-5 .center-title {
 }
 
 .go-top .text {
-    position: absolute;
-    width: 15px;
-    margin-left: 3px;
+    width: 0;
+    vertical-align: bottom;
     background: #26a26f;
+    writing-mode: vertical-lr;
     color: #fff;
+    transition: width 500ms;
+}
+
+.go-top:hover {
+    text-decoration: none;
+}
+
+.go-top:hover .text {
+    width: 20px;
 }
 
 @media screen and (max-width: 480px) {
