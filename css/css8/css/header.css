@@ -102,23 +102,19 @@ footer .top-row .right-title {
 
 /* footer文字 */
 
-footer .text-footer {
-    margin-top: 30px;
-    margin-bottom: 0;
-    border-top: 1px solid #32c086;
-    vertical-align: bottom;
-    color: #fff;
-    white-space: pre-wrap;
-}
 
 footer .top-row .col-sm-5 .center-title {
     position: relative;
     top: -5px;
 }
-
+footer .footer-tips {
+    margin-top: 16px; 
+    border-top: 1px solid #32c086;
+    line-height: 30px;
+}
 @media screen and (min-width: 768px) {
     header .left-iphone {
-        margin-left: 117px;
+        margin-left: 110px;
     }
     header .right-icon {
         margin-right: 145px;
@@ -175,10 +171,7 @@ footer .top-row .col-sm-5 .center-title {
     footer .top-row a:hover::after {
         visibility: visible;
     }
-    footer .text-footer {
-        padding-top: 20px;
-        line-height: 15px;
-    }
+    
 }
 
 /* 小于768px */
@@ -231,6 +224,14 @@ footer .top-row .col-sm-5 .center-title {
         display: block;
     }
 }
+@media screen and (max-width: 480px) {
+    footer .footer-tips {
+        line-height: normal;
+    }
+    footer .location {
+        display: block;
+    }
+}
 
 /* 向上按钮 */
 
@@ -267,32 +268,7 @@ footer .top-row .col-sm-5 .center-title {
 
 @media screen and (max-width: 480px) {
     .go-top {
-        position: fixed;
-        right: 0px;
-        bottom: 250px;
-        height: 80px;
-        text-decoration: none;
-        overflow: hidden;
-    }
-    .go-top .fa-arrow-circle-up {
-        color: #26a26f;
-        font-size: 2em;
-        vertical-align: top;
-
-    }
-    .go-top .text {
-        width: 0;
-        vertical-align: top;
-        background: #26a26f;
-        writing-mode: vertical-lr;
-        color: #fff;
-        transition: width 500ms;
-    }
-    .go-top:hover {
-        text-decoration: none;
-    }
-    .go-top:hover .text {
-        width: 20px;
+       display: none;
     }
     
 }

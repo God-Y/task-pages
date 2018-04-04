@@ -103,6 +103,7 @@ main .first-row .user-total .user-now {
 
 main .stduy-title {
     margin: 120px 0 50px;
+    
 }
 
 /* 第二行开始 */
@@ -200,7 +201,14 @@ main .third-row .page-point i {
 main .third-row .page-point i:first-child {
     background: #26a26f;
 }
-
+/* 第四行公司 */
+main .fourth-row .company-box {
+    transition: transform 0.5s;
+}
+main .fourth-row .company-box:hover {
+    box-shadow: 0 0 5px 3px #999;
+    transform: scale(1.01);
+}
 /* footer开始 */
 
 footer {
@@ -246,30 +254,19 @@ footer .top-row .right-title {
 }
 
 /* footer文字 */
-
-footer .text-footer {
-    margin-top: 30px;
-    margin-bottom: 0;
-    border-top: 1px solid #32c086;
-    vertical-align: bottom;
-    color: #fff;
-    white-space: pre-wrap;
-}
-
 footer .top-row .col-sm-5 .center-title {
     position: relative;
     top: -5px;
 }
-
+footer .footer-tips {
+    margin-top: 16px; 
+    border-top: 1px solid #32c086;
+    line-height: 30px;
+}
 /* 大于996px的媒体查询 */
 
 @media screen and (min-width: 997px) {
-    header .left-iphone {
-        margin-left: 117px;
-    }
-    header .right-icon {
-        margin-right: 145px;
-    }
+   
     /* 面包式导航栏 */
     header .navbar-brand {
         line-height: 50px;
@@ -305,9 +302,12 @@ footer .top-row .col-sm-5 .center-title {
     main .first-row {
         height: 350px;
     }
+    /* 虚线效果 */
     main .first-row .user-total {
-        margin-left: 50px;
-        margin-top: 50px;
+        padding: 40px 0 40px 50px;
+    }
+    main .first-row .user-total {
+        border-left: 1px dashed #dedede;
     }
     main .first-row .same-class {
         text-align: left;
@@ -389,21 +389,13 @@ footer .top-row .col-sm-5 .center-title {
     footer .top-row a:hover::after {
         visibility: visible;
     }
-    footer .text-footer {
-        padding-top: 20px;
-        line-height: 15px;
-    }
+    
 }
 
 /* 大于768px的媒体查询 小于996px*/
 
-@media screen and (min-width: 768px) and (max-width: 996px) {
-    header .left-iphone {
-        margin-left: 117px;
-    }
-    header .right-icon {
-        margin-right: 145px;
-    }
+@media screen and (min-width: 769px) and (max-width: 996px) {
+  
     /* 面包式导航栏 */
     header .navbar-brand {
         line-height: 50px;
@@ -440,8 +432,10 @@ footer .top-row .col-sm-5 .center-title {
         height: 350px;
     }
     main .first-row .user-total {
-        margin-left: 50px;
-        margin-top: 50px;
+        padding: 40px 0 40px 50px;
+    }
+    main .first-row .user-total {
+        border-left: 1px dashed #dedede;
     }
     main .first-row .same-class {
         text-align: left;
@@ -524,10 +518,6 @@ footer .top-row .col-sm-5 .center-title {
     footer .top-row a:hover::after {
         visibility: visible;
     }
-    footer .text-footer {
-        padding-top: 20px;
-        line-height: 15px;
-    }
 }
 
 /* 小于768px */
@@ -564,7 +554,7 @@ footer .top-row .col-sm-5 .center-title {
     }
     /* 第二行开始 */
     main .second-row .fa-arrow-right {
-        right: 20px;
+        right: 10px;
     }
     /* 第四行公司 */
     main .fourth-row .company-box {
@@ -574,9 +564,12 @@ footer .top-row .col-sm-5 .center-title {
         background: #fff;
         box-shadow: 0 0 3px 2px #d8d8d8;
     }
+  
     main .fourth-row .company-box img {
         vertical-align: middle;
     }
+
+
     /* 第五行友情链接 */
     main .fifth-row .link-box {
         text-align: center;
@@ -650,7 +643,16 @@ footer .top-row .col-sm-5 .center-title {
         display: block;
     }
 }
-
+@media screen and (min-width : 560px) and (max-width : 767px) {
+    main .second-row .fa-arrow-right {
+        right: 120px;
+    }
+}
+@media screen and (max-width : 559px) {
+    main .second-row .fa-arrow-right {
+        right: 30px;
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
     main .step-container .round-num {
         width: 40px;
@@ -696,6 +698,12 @@ footer .top-row .col-sm-5 .center-title {
     main .fifth-row .link-box li:hover::after {
         visibility: visible;
     }
+    footer .footer-tips {
+        line-height: normal;
+    }
+    footer .location {
+        display: block;
+    }
 }
 
 /* 向上按钮 */
@@ -733,36 +741,6 @@ footer .top-row .col-sm-5 .center-title {
 
 @media screen and (max-width: 480px) {
     .go-top {
-        position: fixed;
-        right: 0px;
-        bottom: 250px;
-        height: 80px;
-        text-decoration: none;
-        overflow: hidden;
+        display:none;
     }
-    .go-top .fa-arrow-circle-up {
-        color: #26a26f;
-        font-size: 2em;
-        vertical-align: top;
-
-    }
-    
-    
-    .go-top .text {
-        width: 0;
-        vertical-align: top;
-        background: #26a26f;
-        writing-mode: vertical-lr;
-        color: #fff;
-        transition: width 500ms;
-    }
-    
-    .go-top:hover {
-        text-decoration: none;
-    }
-    
-    .go-top:hover .text {
-        width: 20px;
-    }
-    
 }
