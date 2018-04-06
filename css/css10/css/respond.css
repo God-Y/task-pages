@@ -1,0 +1,81 @@
+/* 小于480px移动端的响应式 */
+@media screen and (max-width : 480px){
+    /* 控制登录注册按钮宽度 */
+    .first-row {
+        padding: 0;
+    }
+    header .login-res a {
+        width:40px;
+    }
+    header .login-res .login::before{
+        margin-left: -12px;
+    }
+
+}
+@media screen and (min-width : 612.5px) {
+    main .second-row .select-step span::after {
+      
+        left: 24px;
+        top:50%;
+        transform: translateY(-50%);
+        width: 60px;
+     
+    }
+    main .second-row .select-step span::before {
+     
+        left: -60px;
+        top:50%;
+        transform: translateY(-50%);
+        width: 60px;
+       
+    }
+}
+@media screen and (min-width : 320px) and (max-width : 612px ) {
+    main .second-row .select-step {
+        float: none;
+    }
+    main .second-row .step-con{
+        position: relative;
+        width: 50%;
+        text-align: center;
+        line-height: 50px;
+    }
+    main .second-row .select-step span{
+            position: static;
+    } 
+    main .second-row .select-step span::after {
+        right:0;
+        width: 46%;
+        margin-top:9px;
+    }
+    main .second-row .select-step span::before {
+        left:0;
+        width: 46%;
+        margin-top:9px; 
+    }
+    
+}   
+@media screen and (max-width : 319px) {
+        main .second-row .select-step {
+            float: none;
+        }
+        main .second-row .step-con{
+            position: relative;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+        }
+        main .second-row .select-step span{
+                position: static;
+        } 
+        main .second-row .select-step span::after {
+            right:0;
+            width: 46%;
+            margin-top:9px;
+        }
+        main .second-row .select-step span::before {
+            left:0;
+            width: 46%;
+            margin-top:9px; 
+        }
+    }

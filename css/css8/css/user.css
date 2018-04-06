@@ -109,13 +109,31 @@ main .table-row .col-md-4 {
 }
 
 main .table-row table {
-    box-shadow: 0 1px 3px 1px #999;
+  
     margin-bottom: 0;
 }
 
 main .table-row td {
     border: 1px solid #edf1f2;
 }
+/* 设置边框 */
+main .second-table {
+    width: 100%;
+} 
+main .second-table td {
+    padding: 8px;
+}
+main .table-row .right-salary {
+    float: right;
+   
+}
+
+main .table-row .salary {
+    text-align: center;
+    line-height: 117px;
+}
+
+
 
 main .table-row .head-photo {
     width: 30%;
@@ -132,20 +150,9 @@ main .table-row .job-title span {
     margin: 10px 0;
     font-weight: bold;
 }
-
 main .table-row .fa-star {
     padding-left: 10px;
     color: #ff5c00;
-}
-
-main .table-row .salary {
-    text-align: center;
-    line-height: 117px;
-}
-
-main .table-row .right-salary {
-    float: right;
-    margin-right: 5px;
 }
 
 main .table-row .year {
