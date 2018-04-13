@@ -44,18 +44,55 @@ main {
     list-style: none;
     padding-left: .68rem;
     border-bottom: 1px solid #e1e5e7; }
+    main .msg-list ul .se-icon {
+      display: inline-block;
+      width: .24rem;
+      height: .24rem;
+      margin-left: -.38rem;
+      margin-right: .16rem;
+      background: url("../img/sprite.png") -1.4rem -0.2rem; }
+    main .msg-list ul .lo-icon {
+      display: inline-block;
+      width: .2rem;
+      height: .24rem;
+      margin-left: -0.38rem;
+      margin-right: .16rem;
+      background: url("../img/sprite.png") -0.2rem -0.2rem; }
     main .msg-list ul li {
-      margin-bottom: .3rem; }
+      line-height: .48rem; }
+    main .msg-list ul .data {
+      text-overflow: ellipsis;
+      font-size: .28rem;
+      white-space: nowrap;
+      overflow: hidden; }
+    main .msg-list ul .time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    main .msg-list ul .server, main .msg-list ul .location {
+      color: #999;
+      font-size: .26rem; }
+    main .msg-list ul .location {
+      margin-bottom: .2rem; }
   main .msg-list .salary-box {
     float: right;
+    white-space: nowrap;
     font-size: .3rem;
+    line-height: .4rem;
     color: #e9532b; }
     main .msg-list .salary-box .go {
       display: inline-block;
-      padding: .18rem .1rem;
+      padding: 9px 5px;
       margin-right: .15rem;
       margin-left: .1rem;
-      background: url("../img/sprites.png") -0.4rem -0.1rem; }
+      background: url("../img/sprite.png") -40px -10px;
+      vertical-align: bottom; }
+
+.separator {
+  display: inline-block;
+  padding: 0.15rem 0.16rem 0.15rem;
+  margin-left: 0.18rem;
+  border-left: 1px solid #e1e5e7; }
 
 .nav-fixed {
   position: fixed;
@@ -114,8 +151,36 @@ main {
         list-style: none;
         text-align: center;
         background: #fff; }
-      .nav-fixed .drop-nav .drop-container li {
-        line-height: 1.5; }
-        .nav-fixed .drop-nav .drop-container li:hover {
-          background: #d8d8d8;
-          color: #fff; }
+      .nav-fixed .drop-nav .drop-container li:hover {
+        background: #d8d8d8;
+        color: #fff; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 1.08rem;
+  border-top: .01rem solid #e2eaec;
+  font-size: .2rem;
+  background: #f8fafb; }
+  footer .webpage {
+    color: #5fc0cd; }
+    footer .webpage img {
+      width: .46rem;
+      height: .4rem;
+      margin-bottom: .1rem; }
+  footer .write {
+    font-size: 0; }
+    footer .write img {
+      width: .94rem;
+      height: .94rem; }
+  footer .user {
+    text-align: center;
+    color: #a5a5a5; }
+    footer .user img {
+      width: .42rem;
+      height: .41rem;
+      margin-bottom: .1rem; }

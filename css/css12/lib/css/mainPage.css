@@ -64,6 +64,66 @@ main {
       padding: 0.15rem 0.16rem 0.15rem;
       margin-left: 0.18rem;
       border-left: 1px solid #e1e5e7; }
+    main ul .nav-fixed {
+      position: fixed;
+      width: 100%; }
+      main ul .nav-fixed .drop-nav {
+        display: flex;
+        height: 0.8rem;
+        color: #999; }
+        main ul .nav-fixed .drop-nav input {
+          width: 0;
+          height: 0; }
+          main ul .nav-fixed .drop-nav input:checked ~ ul {
+            display: block; }
+        main ul .nav-fixed .drop-nav label {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          font-size: 0.3rem;
+          border-bottom: 1px solid #e1e5e7;
+          background: #fff; }
+          main ul .nav-fixed .drop-nav label:active {
+            background: #5fc0cd;
+            color: #fff; }
+          main ul .nav-fixed .drop-nav label::after {
+            content: "";
+            position: absolute;
+            right: 0.16rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 0.08rem solid #afbac0;
+            border-right: 0.08rem solid transparent;
+            border-left: 0.08rem solid transparent; }
+        main ul .nav-fixed .drop-nav .drop-container {
+          position: relative;
+          flex: 1;
+          font-size: 0;
+          line-height: .8rem; }
+          main ul .nav-fixed .drop-nav .drop-container::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 80%;
+            background: #e1e5e7; }
+          main ul .nav-fixed .drop-nav .drop-container ul {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            margin-top: -.1rem;
+            padding: 0;
+            font-size: 0.3rem;
+            list-style: none;
+            text-align: center;
+            background: #fff; }
+          main ul .nav-fixed .drop-nav .drop-container li:hover {
+            background: #d8d8d8;
+            color: #fff; }
     main ul li {
       border-bottom: 1px solid #e1e5e7;
       display: flex;
