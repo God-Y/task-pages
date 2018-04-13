@@ -9,7 +9,7 @@ var htmlmin  =require('gulp-htmlmin');
 gulp.task('html', function() {
     gulp.src('src/*.html')
         .pipe(gulp.dest('lib'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
   });
 gulp.task('scss',function(){
     gulp.src('src/scss/*.scss')
