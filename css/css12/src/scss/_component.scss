@@ -1,0 +1,14 @@
+
+
+$separa-padding-top:.15rem;
+$separa-padding-lr:.16rem;
+$separa-padding-bo:.15rem;
+$separa-margin-l:.18rem;
+$separa-border-color:#e1e5e7;
+$separa-border-width:1px;
+.separator {
+    display: inline-block;
+    padding: $separa-padding-top $separa-padding-lr $separa-padding-bo;
+    margin-left: $separa-margin-l;
+    border-left: $separa-border-width solid $separa-border-color;
+}
