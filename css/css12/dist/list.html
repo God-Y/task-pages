@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0，maxinum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/flexible.min.js"></script>
+    <script src="js/flexible.js"></script>
     <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/list.min.css">
+    <link type="text/css" rel="stylesheet" href="css/list.css">
 
     <title>找护工</title>
 </head>
@@ -26,16 +26,16 @@
             <nav class="drop-nav">
                 <div class="drop-container ">
                     <input type="radio" name="drop" id="drop-location">
-                    <label for="drop-location">所在地</label>
-                    <ul class="center">
+                    <label for="drop-location" id='labelLoca'>所在地</label>
+                    <ul class="center" >
                         <li class="drop-content">艾欧尼亚</li>
                         <li class="drop-content">德玛西亚</li>
                         <li class="drop-content">诺克萨斯</li>
                     </ul>
                 </div>
-                <div class="drop-container ">
+                <div class="drop-container">
                     <input type="radio" name="drop" id="drop-broad">
-                    <label for="drop-broad">食宿</label>
+                    <label for="drop-broad" id="labelBroad">食宿</label>
                     <ul class="center">
                         <li class="drop-content">包吃</li>
                         <li class="drop-content">包住</li>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="drop-container ">
                     <input type="radio" name="drop" id="drop-patient">
-                    <label for="drop-patient">病人情况</label>
+                    <label for="drop-patient" id="labelPati">病人情况</label>
                     <ul class="center">
                         <li class="drop-content">卧病在床</li>
                         <li class="drop-content">半身不遂</li>
@@ -197,7 +197,7 @@
 
 
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/list.min.js">
+    <script src="js/list.js">
     </script>
 </body>
 
