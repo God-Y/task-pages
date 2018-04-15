@@ -121,7 +121,7 @@ main {
     main .game-body .go-page {
       position: fixed;
       margin-left: .2rem;
-      margin-top: .2rem;
+      margin-top: .22rem;
       border-left: .28rem solid #fbb435;
       border-top: .28rem solid transparent;
       border-bottom: .28rem solid transparent; }
