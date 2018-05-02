@@ -64,12 +64,31 @@ main {
     .result-container {
         padding: .56rem .81rem .28rem;
         color: #fff;
+        margin:0;
+        list-style: none;
         font-size: .26rem;
         background: $bgcolor;
-        p {
-            white-space: pre-wrap;
-            margin: 0;
+        li {
+            
+            margin: .05rem 0;
+            &:nth-child(2){
+                display: flex;
+                span{
+                    flex-basis: 30%;
+                    white-space: pre-wrap;
+                }
+            }
+            &:nth-child(3){
+                display: flex;
+                span{
+                    flex-basis: 30%;
+                    white-space: pre-wrap;
+                    
+                }
+            }
+            
         }
+    
     }
     .game-step {
         height: 1.64rem;

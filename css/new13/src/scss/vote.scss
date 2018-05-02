@@ -79,17 +79,20 @@ main{
         }
     }
     .gamer-vote {
-        font-size: .3rem;
+        font-size: 0;
+        .vote-container {
+            display: inline-block;
+            width: 33.3%;
+            font-size: .3rem;
+            text-align: center;
+        }
         .gamer{
             position: relative;
             display: inline-flex;
             flex-direction: column;
-            box-sizing: border-box;
             width: 20.5vw;
             height: 20.5vw;
-            margin:0 5.4% 12% 6.2%;
-            margin-left: 6.2%;
-            margin-right: 5.4%;
+            margin-bottom:40%;
             border:.05rem solid #fff;
             &:hover > .gamer-select{
                 visibility: visible;
