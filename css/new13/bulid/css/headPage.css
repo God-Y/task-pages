@@ -79,8 +79,7 @@ body {
   height: 100%;
   overflow: hidden; }
   .page-container .select-list {
-    flex: none;
-    flex-basis: 75%;
+    flex: 0 0 75%;
     background: #fff;
     color: #5fc0cd; }
     .page-container .select-list ul {

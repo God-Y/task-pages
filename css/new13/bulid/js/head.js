@@ -11,5 +11,5 @@
 });
 
 $('#toggle').on('click',function(){
-    $('#ttt').toggle('normal');
+    $('#ttt').toggle();
 });

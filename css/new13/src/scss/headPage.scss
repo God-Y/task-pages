@@ -27,8 +27,7 @@ body {
     height: 100%;
     overflow: hidden;
     .select-list {
-        flex:none;
-        flex-basis: 75%;
+        flex:0 0 75%;
         background: #fff;
         color: #5fc0cd;
         ul {
