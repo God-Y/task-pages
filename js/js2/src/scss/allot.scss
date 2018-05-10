@@ -1,0 +1,90 @@
+@import 'header';
+@mixin horizontal-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+$text-color:#f8bd4a;
+html {
+    height: 100%;
+}
+body {
+    font-size: 32px;
+    height: 100%;
+}
+main{
+    padding-top: .88rem;
+    h4{
+        margin: 0 .4rem;
+        text-align: center;
+        line-height: .88rem;
+        box-shadow: .02rem .02rem  .02rem #d8d8d8; }   
+    .id-container {
+        display: flex;
+        height: 1.16rem;
+        align-items: center;
+        margin-top: .3rem;
+        div{
+            flex-basis: 50%;
+            margin-left: .2rem;
+            line-height: 1rem;
+        }
+        .kill-id {
+            span{
+                &:first-child{
+                    color: red;
+                }
+            }
+        }
+        span{
+            &:first-child{
+                display: inline-block;
+                width: 1rem;
+                margin-right: .2rem;
+                font-size: .6rem;
+                text-align: center;
+                background: yellow;
+                border-radius: 50%;
+                box-shadow: 0 0 .05rem .01rem #fff inset;
+            }
+            &:last-child{
+                display: inline-block;
+                width: .3rem;
+            }
+        }
+    }
+    .input-player {
+        @include horizontal-center();
+        white-space: nowrap;
+        bottom: 3.4rem;
+        label{
+            font-weight: bold;
+        }
+        input {
+            width: .5rem;
+            height: .5rem;
+            border:none;
+            padding-left: .15rem;
+            background: pink;
+            color: navy;
+            outline-color: currentColor;
+        }
+        small{
+            color:$text-color;
+        }
+    }
+}
+
+    button {
+        @include horizontal-center();        
+        bottom: .5rem;
+        width: 95%;
+        border: none;
+        line-height: 1rem;
+        text-align: center;
+        font-size: .5rem;
+        color: #fff;
+        background-color: $text-color;
+        outline: none;
+    }
+

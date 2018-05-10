@@ -81,7 +81,9 @@ body {
   .page-container .select-list {
     flex: 0 0 75%;
     background: #fff;
-    color: #5fc0cd; }
+    color: #5fc0cd; 
+    transition: all 2s;
+}
     .page-container .select-list ul {
       list-style: none;
       padding: 0; }
