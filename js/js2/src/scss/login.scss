@@ -1,0 +1,53 @@
+html{
+    height: 100%;
+}
+$bg-color:#29bde0;
+//定义动画
+@mixin animation($name){
+    animation: $name 2s;
+}
+@mixin keyframes($name,$obj){
+    @keyframes #{$name} {
+        @each $i,$val in $obj {
+            #{$i} {
+                @each $value1,$value2 in $val{
+                    #{$value1}:$value2;
+                }
+            }
+        }
+    }
+}
+body{
+    height: 100%;
+    margin:0;
+    background: $bg-color;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    font-size: 60px;
+    padding-top: 80px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    span{
+        margin: 10px 0;
+        text-align: center;
+        &:first-child{
+            $from:(transform:translateZ(-10000px));
+            $to:(transform:translateZ(0));
+            @include animation(span-text1);        
+            // @include keyframes(span-text1, )
+        }
+         
+    }
+}
+small{
+    display: block;
+    text-align: center;
+    color: antiquewhite;
+    letter-spacing: 2px;
+    
+}
+
+   

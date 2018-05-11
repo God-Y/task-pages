@@ -18,7 +18,10 @@ $(function () {
        var interval;
     //获取随机颜色
     function bgcolors() {
-        return '#' + Math.floor(Math.random() * 0xffffff).toString(16);
+       
+        // return '#' + Math.floor(Math.random() * 0xffffff).toString(16);
+        //新颜色
+        return `rgb(${~~(Math.random()*256)},${~~(Math.random()*256)},${~~(Math.random()*256)})`;
     }
     //开始按钮点击触发事件
     $('#startBtn').on('click', function () {
@@ -27,11 +30,19 @@ $(function () {
             clearInterval(interval);
         }
         interval = setInterval(function () {
-            nodes.css('background', '#FFA500');
+            for(let j=0; j<nodes.length;j++){
+                nodes[j].style.background="#FFA500";
+            }
+            // nodes.css('background', '#FFA500');
             var nodearr = getRandomArrayElements(nodes, 3);
+
+            // for (var i = 0; i < 3; i++) {
+            //     nodearr[i].style.background = '#fff';
+            // }
             for (var i = 0; i < 3; i++) {
                 var bgcolor = bgcolors();
                 nodearr[i].style.background = bgcolor;
+                console.log(i);
             }
         }, 1000);
     });
@@ -40,5 +51,7 @@ $(function () {
         clearInterval(interval);
         nodes.css('background', '#FFA500');
     })
-
+    // for(var i=0;i<60;i++){
+    //     console.log(bgcolors());
+    // }
 });

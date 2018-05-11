@@ -1,0 +1,27 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  background: #29bde0; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  font-size: 60px;
+  padding-top: 80px;
+  transform-style: preserve-3d;
+  perspective: 600px; }
+  main span {
+    margin: 10px 0;
+    text-align: center; }
+    main span:first-child {
+      animation: span-text1 2s; }
+
+small {
+  display: block;
+  text-align: center;
+  color: antiquewhite;
+  letter-spacing: 2px; }
