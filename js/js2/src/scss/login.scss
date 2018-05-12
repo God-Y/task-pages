@@ -4,7 +4,7 @@ html{
 $bg-color:#29bde0;
 //定义动画
 @mixin animation($name){
-    animation: $name 2s;
+    animation: $name ;
 }
 @mixin keyframes($name,$obj){
     @keyframes #{$name} {
@@ -18,35 +18,56 @@ $bg-color:#29bde0;
     }
 }
 body{
+    position: relative;
     height: 100%;
     margin:0;
     background: $bg-color;
+    transform-style: preserve-3d;
+    perspective: 600px;
+}
+time {
+    position: absolute;
+    right: 30px;
+    top:30px;
+    width: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    background: linear-gradient(to right,#d8d8d8,rgba(0,0,0,.5) 70% );
+    box-shadow: 1px 1px 2px #fff;
+
 }
 main{
     display: flex;
     flex-direction: column;
     height: 70%;
     font-size: 60px;
-    padding-top: 80px;
-    transform-style: preserve-3d;
-    perspective: 600px;
+    padding-top: 50px;
+   
     span{
         margin: 10px 0;
         text-align: center;
-        &:first-child{
-            $from:(transform:translateZ(-10000px));
-            $to:(transform:translateZ(0));
-            @include animation(span-text1);        
-            // @include keyframes(span-text1, )
-        }
-         
+        
+            $from:(transform:translateZ(-10000px),text-shadow:initial,color:initial);
+            $to:(transform:translateZ(0),text-shadow:10px 10px 10px rgba(0,0,0,.5),color:#fff);
+            @include animation(span-text1 2s forwards);
+            $obj:(0%:$from,100%:$to);        
+            @include keyframes(span-text1,$obj);
     }
 }
 small{
     display: block;
+    margin-top: 20px;
     text-align: center;
     color: antiquewhite;
     letter-spacing: 2px;
+    font-size: 16px;
+        $form1:(transform:scale(10),text-shadow:initial,color:#fff);
+        $to1:(transform:scale(1),text-shadow:3px 3px 5px #fff,color:green);
+             $obj1:(0%:$form1,100%:$to1);
+             @include animation(left 2s forwards);
+             @include keyframes(left,$obj1 );
+      
     
 }
 
