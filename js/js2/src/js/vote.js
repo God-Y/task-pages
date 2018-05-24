@@ -7,8 +7,7 @@
           len = playersArr.length,
           domStr = '';
       for (var i = 0; i < len; i++) {
-          domStr +=
-              ` <div class="vote-container">
+          domStr +=` <div class="vote-container">
               <div class="gamer">
                       <span class="gamer-id">${playersArr[i]}</span>
                       <span class="gamer-num">${i+1}号</span>

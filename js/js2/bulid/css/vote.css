@@ -9,6 +9,7 @@ header {
   align-items: center;
   width: 100%;
   height: 0.88rem;
+  border-bottom: .01rem solid #b9e9f5;
   font-size: 0.34rem;
   color: #fff;
   background: #5fc0cd;
@@ -69,9 +70,7 @@ main {
       width: 20.5vw;
       height: 20.5vw;
       margin-bottom: 40%;
-      border: .05rem solid #fff; }
-      main .gamer-vote .gamer:hover > .gamer-select {
-        visibility: visible; }
+      border: 0.05rem solid #fff; }
     main .gamer-vote .gamer-id {
       flex-basis: 75%;
       display: flex;
@@ -87,21 +86,22 @@ main {
       background: #83b09a;
       color: #fff; }
     main .gamer-vote .gamer-select {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: none;
       position: absolute;
       bottom: -60%;
       left: -5%;
       width: 110%;
-      height: 55%;
-      visibility: hidden; }
+      height: 55%; }
     main .gamer-vote i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 30%;
       height: 23%;
       padding-bottom: 20%;
       background-image: url(../img/sprite.png);
-      background-size: 100%; }
+      background-size: 100%;
+      transform: translate(-50%, -50%); }
 
 footer {
   position: fixed;
@@ -120,4 +120,5 @@ footer {
     border: none;
     color: #fff;
     font-size: .4rem;
-    background: #fbb435; }
+    background: #fbb435;
+    cursor: pointer; }

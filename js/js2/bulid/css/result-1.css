@@ -38,14 +38,14 @@ main {
     color: #ffc865;
     background: #5fc0cd; }
   main .result-container {
-    padding: .56rem .81rem .28rem;
+    padding: .56rem .81rem .18rem;
     color: #fff;
     margin: 0;
     list-style: none;
     font-size: .26rem;
     background: #5fc0cd; }
     main .result-container li {
-      margin: .05rem 0; }
+      margin: .15rem 0; }
       main .result-container li:nth-child(2) {
         display: flex; }
         main .result-container li:nth-child(2) span {
@@ -62,21 +62,14 @@ main {
     border-bottom: .01rem solid #ddd; }
     main .game-step .date {
       margin: 0 .81rem; }
-    main .game-step .hour {
-      float: right;
-      margin-top: .1rem;
-      font-size: .2rem;
-      color: #d5d5d5; }
     main .game-step h4 {
-      margin: 0;
+      margin: .1rem 0;
       padding-top: .1rem;
       font-size: .3rem; }
     main .game-step p {
-      margin: 0;
+      margin: .1rem 0;
       font-size: .26rem;
       color: #bcbcbc; }
-      main .game-step p:nth-child(3) {
-        margin-top: .3rem; }
 
 footer {
   position: fixed;

@@ -15,7 +15,7 @@ body {
 main{
     padding-top: .88rem;
     h4{
-        margin: 0 .4rem;
+        margin: .1rem .4rem;
         text-align: center;
         line-height: .88rem;
         box-shadow: .02rem .02rem  .02rem #d8d8d8; }   
@@ -24,34 +24,24 @@ main{
         height: 1.16rem;
         align-items: center;
         margin-top: .3rem;
+        img{
+            width: .6rem;
+            height: .6rem;
+            vertical-align: -.16rem;
+            border-radius: 50%;
+        }
         div{
             flex-basis: 50%;
             margin-left: .2rem;
             line-height: 1rem;
         }
-        .kill-id {
-            span{
-                &:first-child{
-                    color: red;
-                }
-            }
+        .players-num{
+            display: inline-block;
+            width: .3rem;
+            text-align: center;
         }
-        span{
-            &:first-child{
-                display: inline-block;
-                width: 1rem;
-                margin-right: .2rem;
-                font-size: .6rem;
-                text-align: center;
-                background: yellow;
-                border-radius: 50%;
-                box-shadow: 0 0 .05rem .01rem #fff inset;
-            }
-            &:last-child{
-                display: inline-block;
-                width: .3rem;
-            }
-        }
+        
+       
     }
     .input-player {
         @include horizontal-center();

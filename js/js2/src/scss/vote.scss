@@ -13,6 +13,7 @@ body {
 $header-height:.88rem;
 $header-bgcolor:#5fc0cd;
 $text-color-white:#fff;
+
 // 两端的距离
 $justify-size:.24rem;
 $center-font-size:.34rem;
@@ -23,8 +24,9 @@ header {
     align-items: center;
     width: 100%;
     height: $header-height;
+    border-bottom: .01rem solid #b9e9f5;
     font-size: $center-font-size;
-    color: #fff;
+    color: $text-color-white;
     background: $header-bgcolor;
     z-index: 1;
     img {
@@ -74,7 +76,7 @@ main{
         .v-title{
                 display: inline-block;
                 margin:.28rem 0 .44rem .72rem;
-                color:#fff;
+                color:$text-color-white;
                 font-size: .24rem;
         }
     }
@@ -93,10 +95,8 @@ main{
             width: 20.5vw;
             height: 20.5vw;
             margin-bottom:40%;
-            border:.05rem solid #fff;
-            &:hover > .gamer-select{
-                visibility: visible;
-            }
+            border:.05rem solid $text-color-white;
+            
         }
         .gamer-id {
             flex-basis: 75%;
@@ -115,24 +115,24 @@ main{
             color: #fff;
         }
         .gamer-select {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: none;
             position: absolute;
             bottom:-60%;
             left:-5%;
             width: 110%;
             height: 55%;
-            visibility: hidden;
         }
         //四个小图标响应式开始
         i {
+            position: absolute;
+            top:50%;
+            left:50%;
             width: 30%;
             height: 23%;
             padding-bottom: 20%;
             background-image: url(../img/sprite.png) ;
             background-size: 100%;
-            
+            transform: translate(-50%,-50%);
         }
     }
 }
@@ -155,5 +155,6 @@ footer {
         color: #fff;
         font-size: .4rem;
         background: #fbb435;
+        cursor: pointer;
     }
 }

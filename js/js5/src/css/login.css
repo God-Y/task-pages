@@ -1,0 +1,36 @@
+canvas, main, main div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000; }
+
+canvas {
+  height: 100%; }
+
+main div {
+  margin: auto;
+  width: 420px;
+  height: 300px;
+  border-radius: 10px;
+  background: #d8d8d8; }
+  @media screen and (max-width: 480px) {
+    main div {
+      width: 80%; } }
+main h4 {
+  text-align: center;
+  color: #00C5CD;
+  font-size: 20px;
+  letter-spacing: 3px; }
+
+/*# sourceMappingURL=login.css.map */

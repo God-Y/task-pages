@@ -9,7 +9,7 @@ window.onload=function(){
         
         setTimeout(function(){
             window.location.href='headerPage.html';
-        },3500)
-    }
+        },3500);
+    };
     timer();
 };

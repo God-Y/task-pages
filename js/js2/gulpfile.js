@@ -146,6 +146,7 @@ gulp.task('online', gulp.series('develop', gulp.parallel('online-css', 'online-j
 
 //定义gulp.watch任务
 gulp.task('watch', function (done) {
+    gulp.watch(path.img.src,develop.img);
     gulp.watch(path.html.src, develop.html);
     gulp.watch(path.scss, develop.css);
     gulp.watch(path.js.src, develop.js);
