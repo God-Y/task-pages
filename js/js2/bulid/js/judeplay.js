@@ -71,54 +71,54 @@
        
 
       //定义有限状态机来控制游戏
-      var fsm=new StateMachine({
-        init:'initial',
-        transitions:[
-            {name:'kill',from:'initial',to:'firstStep'},
-            {name:'ghostSpeak',from:'firstStep',to:'twoStep'},
-            {name:'gamerSpeak',from:'twoStep',to:'threeStep'},
-            {name:'vote',from:'threeStep',to:'lastStep'}
-        ],
-        methods:{
-            onInvalidTransition: function(transition, from, to) {
-               switch(from){
-                   case "initial":
-                    alert('不要跳过游戏步奏，请执行杀手杀人');
-                    break;
-                    case "firstStep":
-                    alert("不要跳过游戏步奏，请亡灵发表遗言");
-                    break;
-                    case "twoStep":
-                    alert("不要跳过游戏步奏，请玩家依次发言");
-                    break;
-                    default :
-                    alert("不要跳过游戏步奏，请进行投票");
-                    
-               }
-            },
-            onKill:function(lifecycle){
-                allgameMsg.kill=true;
-                allgameMsg.vote=false;
-            },
-            onGhostSpeak:function(lifecycle){
-               alert('请亡灵发表遗言');
-            },
-            onGamerSpeak:function(){
-                alert('玩家依次发言');
-            },
-            onVote:function(){
-                //点击进入投票节点，天数加一，vote的状态为true
-                allgameMsg.kill=false;
-                allgameMsg.vote=true;
-                // allgameMsg.days+=1;
-                // log(allgameMsg);
-                // log(1);
-                var allgameStr=JSON.stringify(allgameMsg);
-                sessionStorage.setItem('gamersMsg',allgameStr);
-                window.location.href="judeSee.html";
+        var fsm=new StateMachine({
+            init:'initial',
+            transitions:[
+                {name:'kill',from:'initial',to:'firstStep'},
+                {name:'ghostSpeak',from:'firstStep',to:'twoStep'},
+                {name:'gamerSpeak',from:'twoStep',to:'threeStep'},
+                {name:'vote',from:'threeStep',to:'lastStep'}
+            ],
+            methods:{
+                onInvalidTransition: function(transition, from, to) {
+                switch(from){
+                    case "initial":
+                        alert('不要跳过游戏步奏，请执行杀手杀人');
+                        break;
+                        case "firstStep":
+                        alert("不要跳过游戏步奏，请亡灵发表遗言");
+                        break;
+                        case "twoStep":
+                        alert("不要跳过游戏步奏，请玩家依次发言");
+                        break;
+                        default :
+                        alert("不要跳过游戏步奏，请进行投票");
+                        
+                }
+                },
+                onKill:function(lifecycle){
+                    allgameMsg.kill=true;
+                    allgameMsg.vote=false;
+                },
+                onGhostSpeak:function(lifecycle){
+                alert('请亡灵发表遗言');
+                },
+                onGamerSpeak:function(){
+                    alert('玩家依次发言');
+                },
+                onVote:function(){
+                    //点击进入投票节点，天数加一，vote的状态为true
+                    allgameMsg.kill=false;
+                    allgameMsg.vote=true;
+                    // allgameMsg.days+=1;
+                    // log(allgameMsg);
+                    // log(1);
+                    var allgameStr=JSON.stringify(allgameMsg);
+                    sessionStorage.setItem('gamersMsg',allgameStr);
+                    window.location.href="judeSee.html";
+                }
             }
-        }
-    });
+        });
 
 
 

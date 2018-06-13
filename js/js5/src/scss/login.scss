@@ -31,11 +31,11 @@ canvas {
 }
 main{
     @extend %absolute;
-    div{
+    .form-container{
         @extend %absolute;
         margin: auto;
         width: 420px;
-        height: 300px;
+        height: 320px;
         border-radius: 10px;
         background: #d8d8d8;
         @media screen and (max-width:480px) {
@@ -48,5 +48,41 @@ main{
         color:$blue;
         font-size: 20px;
         letter-spacing: 3px;
+    }
+    .user-box,.pwd-box{
+        width: 300px;
+        background: #fff;
+        line-height: 48px;
+        margin: 20px auto;
+        i{
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 22px;
+        }
+    }
+    .error-show {
+        color: red;
+        position: absolute;
+        width: 300px;
+        left: 0;
+        right: 0;
+        margin: -5px auto 0;
+    }
+    input{
+        border: none;
+        height: 80%;
+        font-size: 18px;
+        outline: none;
+    }
+    .login{
+        display: block;
+        width: 300px;
+        margin:  50px auto 0;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        background: $blue;
+        border-radius: 5px;
+        border: none;
     }
 }

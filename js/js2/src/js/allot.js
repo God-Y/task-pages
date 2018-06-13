@@ -18,22 +18,7 @@ var playNum = document.getElementById('player'),
     pops;
     playNum.value="";
 playNum.addEventListener('change', function () {
-    //人数不在4-18以内的就会弹出框报错
-    if (this.value < 4 || this.value > 18) {
-        var r = confirm("请输入正确的玩家人数!");
-        killerNum.innerText = "";
-        popNum.innerText = "";
-        this.value = "";
-    } else {
-        //创建随机数组并且使用json在页面间传值
-        killers = Number(killerNum.innerText);
-        pops = Number(popNum.innerText);
-        random=bulidArr(killers, pops);
-        msg.killers =killers;
-        msg.pops=pops;
-        msg.random=random;
-        sessionStorage.setItem('playersMsg',JSON.stringify(msg));
-    }
+   
 }, false);
 
 playNum.onkeyup = function () {
@@ -76,9 +61,25 @@ function bulidArr(kills, pops) {
     return randomArr;
 }
 goPage.onclick=function(){
-   if(msg.pops){
-       window.location.href='show.html';
-   }else{
-       alert('请输入玩家数目');
-   }
+     //人数不在4-18以内的就会弹出框报错
+     if (this.value < 4 || this.value > 18) {
+        var r = confirm("请输入正确的玩家人数!");
+        killerNum.innerText = "";
+        popNum.innerText = "";
+        playNum.value = "";
+    } else {
+        //创建随机数组并且使用json在页面间传值
+        killers = Number(killerNum.innerText);
+        pops = Number(popNum.innerText);
+        random=bulidArr(killers, pops);
+        msg.killers =killers;
+        msg.pops=pops;
+        msg.random=random;
+        sessionStorage.setItem('playersMsg',JSON.stringify(msg));
+    }
+//    if(msg.pops){
+//        window.location.href='show.html';
+//    }else{
+//        alert('请输入玩家数目');
+//    }
 };
