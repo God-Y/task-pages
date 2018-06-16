@@ -13,6 +13,22 @@ function toChinese(value) {
     }
 }
 $(function () {
+$('backBtn').on('click',function(){
+    $(location).attr('href','allot.html');    
+});
+$('.close-icon').on('click',function(){
+    var r = confirm("您确定离开游戏吗？");
+    if (r == true) {
+        window.location.href = "headerPage.html";
+    }
+})
+
+
+
+
+
+
+
     var gameMsgstr = sessionStorage.getItem('allMsg');
     var initialMsg = JSON.parse(gameMsgstr);
     let {dayNum:days=null,players,killed,state,voted}=initialMsg;
@@ -176,7 +192,7 @@ $(function () {
                 });
             }
         });
-        //改变bu
+        //改变背景颜色
         function changebgcolor(ele){
             let target=ele;
             $(target).css('background-color','#808080');

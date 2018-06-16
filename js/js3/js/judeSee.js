@@ -145,6 +145,7 @@ skip.on('click', function () {
     killed.length=0;
     players[index].state = 'dead';
     players[index].deadDay=days;
+
     if(initialMsg.killersNum ==0){
         //平民胜利
         initialMsg.result='popWin';
@@ -161,8 +162,7 @@ skip.on('click', function () {
         return ;        
     }
     sessionStorage.setItem('allMsg', JSON.stringify(initialMsg));            
-    // $(location).attr('href','judeplay.html');
-    location.href='judeplay.html';
+    location.href='judePlay.html';
 });
 
 
