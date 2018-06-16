@@ -161,7 +161,8 @@ skip.on('click', function () {
         return ;        
     }
     sessionStorage.setItem('allMsg', JSON.stringify(initialMsg));            
-    $(location).attr('href','judeplay.html');
+    // $(location).attr('href','judeplay.html');
+    location.href='judeplay.html';
 });
 
 
