@@ -26,7 +26,8 @@ main .form-container {
   background: #d8d8d8; }
   @media screen and (max-width: 480px) {
     main .form-container {
-      width: 80%; } }
+      width: 95%; }
+     }
 main h4 {
   text-align: center;
   color: #00C5CD;
