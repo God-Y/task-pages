@@ -29,7 +29,7 @@ $(function () {
                 killstr =  `<li class="kill-result">${ players[j].index+1}号被杀手杀死，真实身份是平民</li>`;
             }
             if( players[j].deadDay==i+1 && players[j].deadReason =='voted'){
-                voteStr =  `<li class="vote-result">${ players[j].index+1}号被杀手杀死，真实身份是${ players[j].id}</li>`;
+                voteStr =  `<li class="vote-result">${ players[j].index+1}号被投票投死，真实身份是${ players[j].id}</li>`;
             }
         }
         str += `<h4 class="day-num">第${toChinese(i+1)}天</h4>
@@ -76,16 +76,16 @@ $(function () {
                 onInvalidTransition: function(transition, from, to) {
                    switch(from){
                        case "initial":
-                        alert('不要跳过游戏步奏，请执行杀手杀人');
+                        alert('请执行杀手杀人');
                         break;
                         case "firstStep":
-                        alert("不要跳过游戏步奏，请亡灵发表遗言");
+                        alert("请执行亡灵发表遗言");
                         break;
                         case "twoStep":
-                        alert("不要跳过游戏步奏，请玩家依次发言");
+                        alert("请执行玩家发言");
                         break;
                         default :
-                        alert("不要跳过游戏步奏，请进行投票");
+                        alert("请执行投票");
                    }
                 },
                 onKill:function(lifecycle){

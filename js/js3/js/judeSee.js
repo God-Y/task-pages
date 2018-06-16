@@ -16,7 +16,7 @@ let {
     voted,
     allDead
 } = initialMsg;
-log(days,state,players,step,allDead)
+
 
 var gamersVote = $('#gamersVote'), //游戏容器
     pageTitle = $('#result'), //页面标题
@@ -99,11 +99,14 @@ $('.vote-container').on('click', function (e) {
 
 });
 skip.on('click', function () {
-    var index =killed[0];
-    if(players[index].state =='dead'){
-        alert('此玩家已死,请选择别的玩家');
-        return ;
-    }   
+    var index =killed[0] ;
+    //判断有没有杀人
+    if(killed.length){
+        if( players[index].state =='dead'){
+            alert('此玩家已死,请选择别的玩家');
+            return ;
+        }   
+    }
     //杀手杀人
     if (state == 'kill' ) {
         //判断是否杀人
@@ -121,36 +124,42 @@ skip.on('click', function () {
         initialMsg.popsNum--;
           
     }  else if (state == 'vote') {
+        //判断投票,本轮必须投票
         if(!killed.length){
             alert('本轮必须投票');
             return ;
         }
+        //判断身份
         if(players[index].id== '杀手'){
             initialMsg.killersNum--;
 
         }else{
             initialMsg.popsNum--;        
         }
+        //天数加一
         initialMsg.dayNum++; 
         players[index].deadReason="voted";
     }
-    killed[0]=null;
+    // log('平民人数：', initialMsg.popsNum,'杀手人数：',initialMsg.killersNum)
+    // alert(1);
+    killed.length=0;
     players[index].state = 'dead';
     players[index].deadDay=days;
     if(initialMsg.killersNum ==0){
+        //平民胜利
         initialMsg.result='popWin';
         sessionStorage.setItem('allMsg', JSON.stringify(initialMsg));
         alert('游戏结束，平民胜利');
         $(location).attr('href','result-1.html');
         return ;
     }else if(initialMsg.killersNum >=initialMsg.popsNum){
+        //杀手胜利
         initialMsg.result='killWin';        
         sessionStorage.setItem('allMsg', JSON.stringify(initialMsg));        
         alert('游戏结束，杀手胜利');        
         $(location).attr('href','result-1.html');        
         return ;        
     }
-    log(players)
     sessionStorage.setItem('allMsg', JSON.stringify(initialMsg));            
     $(location).attr('href','judeplay.html');
 });
