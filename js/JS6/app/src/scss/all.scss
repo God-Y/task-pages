@@ -1,0 +1,26 @@
+@import 'default/mixin';
+@import 'default/virable';
+//引入视图scss依赖
+@import 'view/header';
+@import 'view/leftnav';
+@import 'view/login';
+@import "view/articleList";
+@import "view/pages-components";
+@import "view/detial";
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+
+//背景页的
+.backpage{
+    overflow: hidden;
+    min-height: 100vh;
+    .backpage-nav{
+        padding-bottom: 2000px;
+        margin-bottom: -2000px; 
+        background: $back-bgcolor;
+    }
+}

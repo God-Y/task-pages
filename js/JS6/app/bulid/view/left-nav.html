@@ -1,0 +1,65 @@
+ <div >
+     <!-- 定义左侧手风琴效果 -->
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" is-open="status.open2">
+              <uib-accordion-heading>
+                      <span class="glyphicon glyphicon-pencil pull-left" aria-hidden="true"></span>
+                         信息管理
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open2, 'glyphicon-chevron-right': !status.open2}"></i>
+              </uib-accordion-heading>
+              <span class="goContent">
+                  信息
+              </span>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open">
+              <uib-accordion-heading>
+                      <span class="glyphicon glyphicon-pencil pull-left" aria-hidden="true"></span>
+                         Artical管理
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+              </uib-accordion-heading>
+              <span class="goContent" ng-click="goArticle()"> Artical列表</span> 
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open3">
+              <uib-accordion-heading>
+                      <span class="glyphicon glyphicon-pencil pull-left" aria-hidden="true"></span>
+                         人才管理
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open3, 'glyphicon-chevron-right': !status.open3}"></i>
+              </uib-accordion-heading>
+              <span class="goContent">
+                  人才
+              </span>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open4">
+              <uib-accordion-heading>
+                      <span class="glyphicon glyphicon-pencil pull-left" aria-hidden="true"></span>
+                         推荐管理
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open4, 'glyphicon-chevron-right': !status.open4}"></i>
+              </uib-accordion-heading>
+              <span class="goContent">
+                  推荐
+              </span>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open5">
+              <uib-accordion-heading>
+                      <span class="glyphicon glyphicon-pencil pull-left" aria-hidden="true"></span>
+                         后台管理
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open5, 'glyphicon-chevron-right': !status.open5}"></i>
+              </uib-accordion-heading>
+              <span class="goContent">
+                  后台
+              </span>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="status.open6">
+              <uib-accordion-heading>
+                      <span class="glyphicon glyphicon-pencil pull-left" aria-hidden="true"></span>
+                         内容管理
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open6, 'glyphicon-chevron-right': !status.open6}"></i>
+              </uib-accordion-heading>
+              <span class="goContent">
+                  内容
+              </span>
+            </div>
+         
+        </uib-accordion>
+       
+      </div>

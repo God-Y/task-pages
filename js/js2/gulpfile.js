@@ -153,3 +153,4 @@ gulp.task('watch', function (done) {
 });
 //定义最终的default任务
 gulp.task('default', gulp.series('clean-all', 'develop', gulp.parallel('online-css', 'online-js'), 'collector'));
+

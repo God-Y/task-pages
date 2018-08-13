@@ -1,0 +1,45 @@
+div[ui-view=header]{
+    //后台管理系统盒子
+    .back-link{
+        @include center(50px);
+        height: 50px;
+        background-color: $back-bgcolor;
+        border-bottom: 1px solid #40515E;
+    }
+    //链接按钮
+    a.toback{
+        display:inline-block;
+        font-size: 16px;
+        color: $list-textColor;
+        text-decoration: none;
+    }
+    //右侧的容器
+    .col-sm-10{
+        border-bottom: 1px solid #E4E4E4;
+        line-height: 50px;
+    }
+    //人物
+    .person {
+        padding: 0 20px;
+        color:#317EF3;  
+        cursor: pointer;
+        border-right: 1px solid #d8d8d8;
+        &:hover{
+            @include hover-color(#000000);
+        }
+    }
+    //关闭按钮
+    .glyphicon-off{
+        padding: 0 20px;
+        cursor: pointer;
+        color: 	#FF0000;
+        &:hover{
+            @include hover-color(#337ab7);
+        }
+    }
+}
+.modal-body{
+    padding:30px 30px 15px;
+    font-size: 18px;
+    // font-weight: bold;
+}

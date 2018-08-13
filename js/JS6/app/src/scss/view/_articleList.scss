@@ -1,0 +1,67 @@
+.articleList {
+    .panel{
+        margin-top: 20px;
+    }
+    .select-status,.select-type{
+        padding: 5px 0;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 12px;
+    }
+    
+    .second-row {
+        margin-top: 20px;
+        .clear-btn{
+            margin-right: 15px;
+        }
+    }
+    .panel-heading{
+        h3 {
+            font-weight: bold;
+        }
+    }
+    .select-options {
+        padding-left: 40px;
+        .createTime{
+            display: inline-block;
+            padding: 5px 0;
+            font-weight: bold;
+            margin-left: -5px;
+        }
+    }
+    .separator{
+        text-align: center;
+        padding-top: 4px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    table {
+        border: 1px solid rgba(0, 0, 0, .05);
+        text-align: center;
+        th {
+            text-align: center;
+            &.btn-th{
+                width: 25%;
+            }
+        }
+    }
+    tbody{
+        tr {
+            &:hover {
+                background-color: darkseagreen;
+                color: #fff;
+            }
+            td {
+                vertical-align: middle;
+            }
+        }
+        .td-date{
+            width: 130px;
+        }
+        .btn-margin{
+            margin: 0 10px;
+            padding: 5px;
+        }
+    }
+
+}

@@ -1,0 +1,63 @@
+app.controller('DetialController',['$scope','detialData','$state','httpServer',function($scope,detialData,$state,httpServer){
+    //设置
+    //判断是编辑页还是新增页
+    if($state.params.id){
+        $scope.pageTitle='编辑Article';
+        httpServer.editArticle($state.params.id).then(function(res){
+            var list=res.data.data.article;
+            $scope.addParams={
+                title:list.title,
+                type:list.type,
+                img:list.img,
+                url:list.url,
+                content:list.content
+            };
+            //赋值行业参数
+            if(list.type==3){
+                $scope.addParams.industry=list.industry;
+            }
+        });
+    }else{
+        //新增页面
+        $scope.pageTitle='新增Article';
+        $scope.addParams={
+
+        };
+    }
+    $scope.selectData=detialData;
+    //设一个回调函数
+    var gopage=function(){
+        $state.go('back.ArticleList',{
+            page:1,
+            size:10,
+            status:undefined,
+            endAt:undefined,
+            startAt:undefined,
+            type:undefined
+        });
+    };
+    //取消返回页面
+    $scope.cancel=gopage;
+    //列表上线
+    $scope.go=function(id){
+        //设置上线参数
+        $scope.addParams.status=id;
+        if($state.params.id){
+            //修改单个列表
+            $scope.addParams.createAt =(new Date()).valueOf();
+            httpServer.putArticle(id,$scope.addParams).then(function(res){
+                if(res.data.code ==0){
+                    gopage();
+                }else{
+                    alert('参数错误');
+                }
+            });
+        }else{
+            //新增列表
+            httpServer.addList($scope.addParams).then(function(){
+                //跳转回列表页
+                gopage();
+            });
+        }
+    };
+}]);    

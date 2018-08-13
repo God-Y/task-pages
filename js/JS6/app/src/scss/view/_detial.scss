@@ -1,0 +1,37 @@
+.Articaldetial{
+    input[type=file]{
+        display: none;
+    }
+    .trix-content{
+        min-height: 200px;
+    }
+    .form-group{
+        margin-bottom: 25px;
+    }
+    .trix-button-row{
+        justify-content: flex-start;
+    }
+    th,td{
+        text-align: center;
+    }
+    .btn-xs{
+        margin: 0 5px;
+    }
+    .showImg{
+        margin-top: 20px;
+    }
+    img{
+        max-width: 600px;
+    }
+    td.imgName{
+        width: 30%;
+    }
+    .glyphicon-ok{
+        color: #CCE5FF;
+    }
+    .text-danger{
+        margin-top: 8px;
+        color: red;
+    }
+  
+}

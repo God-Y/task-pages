@@ -1,0 +1,62 @@
+let app=angular.module('app',['ui.router','ui.bootstrap','ngAnimate','ngMessages','ui.router.state.events','angularTrix']);
+//路由配置
+app.config(['$stateProvider','$urlRouterProvider','$locationProvider',function($stateProvider,$urlRouterProvider,$locationProvider){
+    //设置！为空
+    $locationProvider.hashPrefix('');
+    //设置默认路由
+    $urlRouterProvider.otherwise('login');
+    //配置路由
+    $stateProvider
+        .state('login',{
+            url:'/login',
+            templateUrl:'view/login.html',
+            controller:'LoginController'
+        })
+        .state('back',{
+            url:'/back',
+            views:{
+                "":{
+                    templateUrl:'view/back.html'
+                },
+                'header@back':{
+                    templateUrl:'view/header.html',
+                    controller:'HeaderController',
+                    controllerAs:'$ctrl'
+                },
+                'leftNav@back':{
+                    templateUrl:'view/left-nav.html',
+                    controller:'LeftnavController'
+                },
+                "content@back":{
+                    template:'<h1>欢迎来到后台页</h1>'
+                }
+            }
+        })
+        .state('back.ArticleList',{
+            url:"/ArticleList/:page/:size",
+            params:{
+                status:undefined,
+                endAt:undefined,
+                startAt:undefined,
+                type:undefined
+            },
+            views:{
+                "content":{
+                    templateUrl:'view/ArticleList.html',    
+                    controller:'ArtListController',
+                    controllerAs:"CtrlArtList"
+                }
+            }
+        })
+        .state('back.ArticleDetial',{
+            url:"/ArticleDetial/:id",
+            views:{
+                'content':{
+                    templateUrl:'view/ArticleDetial.html',
+                    controller:'DetialController',
+                }
+            }
+        });
+}]);
+
+

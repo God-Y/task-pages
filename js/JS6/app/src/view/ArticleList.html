@@ -1,0 +1,114 @@
+<!-- 列表页 -->
+<div class="articleList">
+    <div class="panel panel-default">
+        <div class="panel-body select-options">
+            <div class="row">
+                <div class="col-md-1 ">
+                    <span class="createTime">发布时间</span>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <!-- 发布时间 -->
+                        <input type="text" class="form-control" uib-datepicker-popup ng-model="Date.createTime" is-open="open.online" datepicker-options="dateOptions.online"
+                            close-text="Close" alt-input-formats="altInputFormats" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open.changeOnline()">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-1">
+                    <p class="separator">一</p>
+                </div>
+                <div class="col-md-3">
+                    <!-- 修改时间 -->
+                    <p class="input-group">
+                        <input type="text" class="form-control" uib-datepicker-popup ng-model="Date.modifyTime" is-open="open.modify" datepicker-options="dateOptions.modify"
+                            close-text="Close" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open.changeModify()">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-1 select-type">
+                    类型
+                </div>
+                <div class="col-md-3 pull-right">
+                    <select class="form-control" ng-model="searchParams.type" ng-options="type.id as type.name for type in select.type">
+                    </select>
+                </div>
+            </div>
+            <div class="row second-row">
+                <div class="col-md-1 select-status">
+                    状 态
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" ng-model="searchParams.status" ng-options="status.id as status.name for status in select.status">
+
+                    </select>
+                </div>
+                <div class="col-md-2 pull-right">
+                    <!-- Standard button -->
+                    <button type="button" class="btn btn-danger clear-btn" ng-disabled="!(searchParams.status||searchParams.type||searchParams.endAt||searchParams.startAt)"
+                        ng-click="clearAll()">清空</button>
+
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-primary" ng-disabled="!(searchParams.status||searchParams.type||searchParams.endAt||searchParams.startAt)"
+                        ng-click="search()">搜索</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a class="btn btn-primary pull-right btn-xs" ui-sref="^.ArticleDetial({id:null})">新增+</a>
+            <h3 class="panel-title">Article列表</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>类型</th>
+                        <th>发布时间</th>
+                        <th>修改时间</th>
+                        <th>发布者</th>
+                        <th>状态</th>
+                        <th class="btn-th">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in initialList">
+                        <!-- <td>{{$index+1}}</td> -->
+                        <td>{{$index+1}}</td>
+                        <td>{{data.title}}</td>
+                        <td>{{data.type|jobStyle}}</td>
+                        <td class="td-date">{{data.createAt|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td class="td-date">{{data.updateAt|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{data.author}}</td>
+                        <td>{{data.status|statusFilter}}</td>
+                        <td class="btn-td">
+                            <button type="button" ng-class="{true:'btn-warning',false:'btn-success'}[data.status ==1]" class="btn btn-margin" ng-click="CtrlArtList.open(data.status,data.id,searchParams,CtrlArtList)">{{data.status|decideStatus}}</button>
+                            <button type="button" ng-click="editArticle(data.id)" class="btn btn-info btn-margin">编辑</button>
+                            <button type="button" class="btn btn-danger btn-margin" ng-click="CtrlArtList.deleteItem(data.id,searchParams)">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- 分页指令的渲染
+     -->
+    <div class="pages-components" pagination pagenum='pageNum'>
+
+    </div>
+</div>

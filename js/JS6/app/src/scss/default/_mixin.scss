@@ -1,0 +1,14 @@
+@mixin center($v-height) {
+    line-height: $v-height;
+    text-align: center;
+}
+//hover 变色
+@mixin hover-color($color) {
+    color:$color;
+}
+
+@mixin ab-vcenter{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,65 @@
+
+<!-- 添加列表页 -->
+<div class="Articaldetial">
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>{{pageTitle}}</strong></div>
+        <div class="panel-body">
+            <form class="form-horizontal" name="form" novalidate>
+                <div class="form-group">
+                    <label for="detailTitle" class="col-sm-1 control-label">标题名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="detailTitle" name="title" ng-model="addParams.title" placeholder="请输入标题" required>
+                    </div>
+                    <div class="col-sm-2 text-danger" ng-show="form.title.$invalid && form.title.$dirty">
+                        title不能为空
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="detailStatus" class="col-sm-1 control-label">类&emsp;&emsp;型</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" id="detailStatus" name="status" required ng-model="addParams.type" 
+                        ng-options="value.id as value.name for value in selectData.type">
+                        </select>
+                    </div>
+                    <div class="col-sm-2" ng-if="addParams.type ==3">
+                        <select class="form-control" required ng-model="addParams.industry" name="industry" ng-options="value.id as value.name for value in selectData.industry">
+                        </select>
+                    </div>
+                    <div class="col-sm-2 text-danger " ng-show="form.status.$invalid && form.status.$dirty" >
+                        请选择状态
+                    </div>
+                    <div class="col-sm-2 text-danger" ng-show="form.industry.$invalid" >
+                        请选择行业
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-1 control-label">说&emsp;&emsp;明</label>
+                    <div class="col-sm-9">
+                        <trix-editor angular-trix ng-model="addParams.content" class="trix-content"></trix-editor>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="detialUrl" class="col-sm-1 control-label">跳转链接</label>
+                    <div class="col-sm-9">
+                        <input type="url" ng-model="addParams.url" class="form-control" id="detialUrl" name="url" required placeholder="请输入地址">
+                    </div>
+                    <div class="col-sm-2 text-danger" ng-show="form.url.$invalid && form.url.$dirty">
+                        请输入正确的网址
+                    </div>
+                </div>
+                <!-- 自定义上传图片指令 -->
+                <div upload-img img-url="addParams.img"></div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-9">
+                        <button type="button" class="btn btn-info" ng-click="go(1)" ng-disabled="form.$invalid && !addParams.img">存为草稿</button>
+                        <button type="button" class="btn btn-info" ng-click="go(2)" ng-disabled="form.$invalid && !addParams.img">立即上线</button>
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-default" ng-click="cancel()">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

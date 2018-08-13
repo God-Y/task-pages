@@ -1,0 +1,41 @@
+<ul>
+    <!-- 分页 -->
+    <li>
+        <label for="" >每页显示</label>
+       <input type="text" ng-model="goPageParams.size">条
+    </li>
+    <li>
+        <a href="" class="btn btn-default" ng-click="goPage(1)" ng-disabled="initialId ==1">首页</a>
+    </li>
+    <li>
+        <a href="" class="btn btn-default" ng-show="initialId>1" ng-click="goPage(initialId-1)">
+            <</a>
+    </li>
+    <li>
+        <button class="btn btn-default" ng-show="initialId>5" ng-disabled="{{true}}">...</button>
+    </li>
+    <!-- 循环开始 -->
+    <li ng-repeat="value in CtrlPage.pageArr ">
+        <a href="" class="btn btn-default" ng-click="goPage(value)" ng-class="{'btnActive':isActive(value)}" ng-disabled="isActive(value)">{{value}}</a>
+    </li>
+    <li>
+        <button class="btn btn-default" ng-disabled="{{true}}"  ng-show="initialId<pagenum-4">...</button>
+    </li>
+    <li>
+        <button href="" class="btn btn-default" ng-if="initialId<pagenum" ng-click="goPage(initialId+1)">
+            > </button>
+    </li>
+    
+    <li>
+        <button class="btn btn-default" ng-click="goPage(pagenum)" ng-disabled="initialId==pagenum">末页</button>
+    </li>
+    <li>
+        <span>{{goPageParams.page}}/{{pagenum}}</span>
+    </li>
+    <li>
+       去第<input type="text" ng-model="skipPage">页
+    </li>
+    <li>
+        <button class="btn btn-default" ng-click="goPage()" >确定</button>
+    </li>
+</ul>

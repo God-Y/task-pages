@@ -1,0 +1,28 @@
+<div class="login">
+    <form name="form" ng-submit="login('login')" novalidate ng-init="showError =true">
+        <!-- 输入用户名 -->
+        <div class="form-group">
+            <span class="glyphicon glyphicon-user"></span>
+            <input type="text" class="form-control" id="name" name="userName" ng-model="user.name" 
+            placeholder="请输入用户名" required ng-change="showError = false">
+        </div>  
+        <!-- 输入密码 -->
+        <div class="form-group">
+            <span class="glyphicon glyphicon-lock"></span>
+            <input type="password" class="form-control" id="pwd" name="pwd" ng-model="user.pwd" placeholder="请输入密码" required ng-change="showError =false">
+        </div>
+        <!-- 报错机制，使用ng-messages name -->
+        <div ng-messages="form.userName.$error" ng-if="form.userName.$dirty" class="error">
+                <div ng-message="required">请输入用户名</div>
+        </div>
+        <!-- 报错机制，使用ng-messages pwd -->
+        <div ng-messages="form.pwd.$error"  ng-if="form.userName.$valid && form.pwd.$dirty" class="error">
+                <div ng-message="required">请输入密码</div>
+        </div>
+        <!-- 发送请求后，判断账户密码是否出错 -->
+        <div ng-if="form.$valid && showError" class="error">
+            <div>{{errorMsg}}</div>
+        </div>
+        <button type="submit" ng-disabled="form.$invalid " class="btn btn-info">登陆</button>
+    </form>
+</div>

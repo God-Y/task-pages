@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-sm-2 back-link">
+        <a ui-sref="back" class="toback">萝卜多后台管理系统</a>
+    </div>
+    <div class="col-sm-10">
+        <div class="pull-right">
+                <!-- 用户名 -->
+                <span class="hunter person">{{managerName}}</span>
+                <span class="user person">{{userName}}</span>
+                <span class="glyphicon glyphicon-off warning" 
+                aria-hidden="true" ng-click="$ctrl.logout()">
+                </span>
+        </div>
+    </div>
+</div>
